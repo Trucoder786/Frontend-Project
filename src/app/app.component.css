@@ -1,0 +1,17 @@
+body{
+    border: 2px solid #f5f5f5;
+    border-radius: 10px;
+    margin: 3em;
+    margin-right: 35px;
+    margin-left: 25px;
+}
+h1{
+    color: #7595ff;
+    text-decoration:underline;
+}
+h2{
+    color: #7595ff;
+}
+.works{
+    margin: 54px;
+}

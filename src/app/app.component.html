@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <h1 class="container text-center m-5">Todo List</h1>
+  <h2 class="container text-center m-5">You're Welcome in Our Todo List, Lets Add some more Task!!</h2>
+
+    <div class="container m-4">
+      <div class="form-floating m-2">
+        <input type="email" class="form-control" #task id="floatingInput" placeholder="Call to Manager">
+        <label for="floatingInput">Enter the Task</label>
+      </div>
+      <div class="form-floating m-2">
+        <input type="text" #des class="form-control" id="floatingPassword" placeholder="Enter the Description">
+        <label for="floatingPassword">Enter the Description</label>
+      </div>
+      <div class="container-center col-6 m-2 ">
+        <button type="submit" class="btn btn-primary" (click)="addTask(task.value,des.value)">Add Task</button>
+      </div>
+    </div>
+    <div class="works">
+    <table class="table container ml-1.8">
+      <thead>
+        <tr>
+          <th scope="col">Task</th>
+          <th scope="col">Description</th>
+          <th scope="col">Remove Task</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of list">
+          <td>{{task.name}}</td>
+          <td>{{task.name2}}</td>
+          <td><button type="button" class="btn btn-outline-danger btn-sm" (click)="removeTask(task.id)">Delete</button></td>
+        </tr>  
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
